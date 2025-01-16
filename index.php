@@ -1,4 +1,5 @@
 <?php 
+
 $server = "localhost";
 $user = "root";
 $password = "aliyo1004";
@@ -16,7 +17,7 @@ try {
         $id = $valuetbl["id"];
         $distributor = $valuetbl["title"];
         echo "<pre>";
-        echo "$id.$name";
+        echo "$id.$distributor => $name";
         echo "<pre>";
     }
 } catch (PDOException) {
