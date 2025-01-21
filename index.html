@@ -4,14 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="script.js"></script>
     <title>My_Cinema</title>
 </head>
 <body>
+    <form name="fo" ></form>
     <header>
-            <div>
-                <h1>My_Cinema</h1>
-            </div>
-            <div><input type="search" placeholder="Rechercher un Film..."></div>
+        <div>
+            <h1>My_Cinema</h1>
+        </div>
+        <div>
+            <form name="fo" method="get" action="">
+            <input type="search" name="keywords" placeholder="Rechercher un Film...">
+            <input type="submit" name="valider" value="Rechercher" />
+        </form>
+        </div>
     </header>
+    <div id="resultats">
+        <div id="nbr">2 résultats trouvés</div>
+        <ol>
+            <li>Resultats 1</li>
+        </ol>
+    </div>
 </body>
 </html>
