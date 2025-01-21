@@ -1,14 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // function reqListener() {
-    //     console.log(this.responseText);
-    // }
 
-    // let req = new XMLHttpRequest();
-    // req.onload = reqListener;
-    // req.open("get", "cinema.sql", true);
-    // req.send();
-    //FETCH
-
+    var resultat = document.getElementById("nbr");
+    console.log(resultat);
+    
 
     fetch("http://localhost:3000/index.php", {
     })
@@ -17,5 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .then((json) => {
         console.log(json);
+        // resultat.innerText = json;
     })
+
 });

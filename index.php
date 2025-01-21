@@ -19,7 +19,7 @@ try {
     
     $tableau=[];
     foreach($resultat as $valuetbl) {
-        array_push($tableau, $valuetbl);
+        array_push($tableau, $valuetbl["title"]);
     }
 
     echo json_encode($tableau);
