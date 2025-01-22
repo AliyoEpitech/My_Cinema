@@ -1,22 +1,26 @@
 <?php 
+
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type, Authorization");
 
-$server = "localhost";
-$user = "root";
-$password = "aliyo1004";
-$table = "cinema";
-
 // try et catch permette de gerer l'erreur.
 
+function movieSearch($search){
 try {
+
+    $server = "localhost";
+    $user = "root";
+    $password = "aliyo1004";
+    $table = "cinema";
+
     $connexion = new PDO("mysql:host=$server;dbname=$table", "$user", "$password");
     $connexion->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-    $requete = $connexion->prepare("SELECT * FROM movie INNER JOIN distributor ON movie.id_distributor = distributor.id INNER JOIN movie_genre ON movie.id = movie_genre.id_movie INNER JOIN genre ON movie_genre.id_genre = genre.id;");
+    $requete = $connexion->query("SELECT title FROM movie WHERE title LIKE '%$search%';");
+    //$requete = $connexion->prepare("SELECT * FROM movie INNER JOIN distributor ON movie.id_distributor = distributor.id INNER JOIN movie_genre ON movie.id = movie_genre.id_movie INNER JOIN genre ON movie_genre.id_genre = genre.id;");
     $requete->execute();
     $resultat = $requete->fetchall(PDO::FETCH_ASSOC);
-    
+
     $tableau=[];
     foreach($resultat as $valuetbl) {
         array_push($tableau, $valuetbl["title"]);
@@ -35,4 +39,8 @@ try {
 
 } catch (PDOException) {
     die("Echec de la connexion");
+} 
+
 }
+
+movieSearch("");
