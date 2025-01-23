@@ -1,26 +1,34 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    fetch("http://localhost:3000/index.php", { method: "GET",})
+    fetch("./DossierPHP/index.php?search=", { method: "get",})
     .then((reponse) => {
         return reponse.json();
     })
     .then((json) => {
-        
+
         var resultat = document.getElementById("nbr");
         console.log(resultat);
         
         var input = document.querySelectorAll("input");
         console.log(input[0]);
         var search = input[0];
+
+        var option = document.querySelectorAll("option");
+        console.log(option);
         
         console.log(json);
         var movie = json;
-    
-        document.addEventListener("click", (e) => {
-            // console.log(e.target);
-            if(e.target == input[1]){
+        
+        document.getElementById("Rechercher").onclick = () => {
+
                 console.log(search["value"]);
-            }
-        })
+                fetch("./DossierPHP/index.php?search="+ search["value"], { method: "get",})
+                .then((reponse) => {
+                    return reponse.json();
+                })
+                .then((json) => {
+                    resultat.innerText = json;                    
+                })
+        }
     })
-});
+})

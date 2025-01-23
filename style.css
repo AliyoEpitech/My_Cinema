@@ -13,3 +13,7 @@ header{
 header h1{
     color: red;
 }
+
+#Formulaire{
+    display: flex;
+}

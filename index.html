@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet" type="text/css">
     <script src="script.js"></script>
+    <link rel="shortcut icon" href="#">
     <title>My_Cinema</title>
 </head>
 <body>
@@ -13,15 +14,32 @@
         <div>
             <h1>My_Cinema</h1>
         </div>
-        <div>
-            <form name="fo" method="GET" action="">
+        <div id="Formulaire">  
             <input type="search" name="keywords" placeholder="Rechercher un Film...">
-            <input type="submit" name="valider" value="Rechercher" />
-        </form>
+            <input id="Rechercher" type="submit" name="valider" value="Rechercher" />
+        <select name ="select">
+            <option value="">Choisissez un genre</option>
+            <option value="action">Action</option>
+            <option value="action">Adventure</option>
+            <option value="action">Animation</option>
+            <option value="action">Biography</option>
+            <option value="action">Comedy</option>
+            <option value="action">Crime</option>
+            <option value="action">Drama</option>
+            <option value="action">Family</option>
+            <option value="action">Fantasy</option>
+            <option value="action">Horror</option>
+            <option value="action">Mystery</option>
+            <option value="action">Romance</option>
+            <option value="action">Sci-Fi</option>
+            <option value="action">Thriller</option>
+        </select>
         </div>
     </header>
     <div id="resultats">
-        <div id="nbr">2 résultats trouvés</div>
+        <div id="nbr"></div>
+    </div>
+    <div>
     </div>
 </body>
 </html>
