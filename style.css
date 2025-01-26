@@ -17,3 +17,11 @@ header h1{
 #Formulaire{
     display: flex;
 }
+
+#select{
+    margin-top: 10px;
+}
+
+body{
+    background-color: aqua;
+}
