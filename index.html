@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet" type="text/css">
-    <script src="script.js"></script>
     <link rel="shortcut icon" href="#">
     <title>My_Cinema</title>
 </head>
@@ -17,6 +16,12 @@
         <div id="Formulaire">  
             <input type="search" name="keywords" placeholder="Rechercher un Film...">
             <input id="Rechercher" type="submit" name="valider" value="Rechercher" />
+        </div>
+    </header>
+    <div id="resultats">
+        <div id="nbr"></div>
+    </div>
+    <div>
         <select name ="select">
             <option value="">Choisissez un genre</option>
             <option value="action">Action</option>
@@ -34,12 +39,10 @@
             <option value="action">Sci-Fi</option>
             <option value="action">Thriller</option>
         </select>
-        </div>
-    </header>
-    <div id="resultats">
-        <div id="nbr"></div>
-    </div>
-    <div>
+        <div id="resultat1"></div>
     </div>
 </body>
+<script src="./SearchMovie.js"></script>
+<script src="genreAction.js"></script>
+<script src="genreAdventure.js"></script>
 </html>
