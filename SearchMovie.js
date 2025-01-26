@@ -16,10 +16,6 @@
         
         var movie = json;
         
-        document.addEventListener("click", (e) =>{
-            console.log(e.target);
-        })
-        
         document.getElementById("Rechercher").onclick = () => {
 
                 console.log(search["value"]);
