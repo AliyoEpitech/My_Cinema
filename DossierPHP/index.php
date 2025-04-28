@@ -14,9 +14,6 @@ function movieSearch($search) {
         array_push($tableau, $valuetbl["title"]);
     }
     echo json_encode($tableau);
-
 }
 
 movieSearch($_GET["search"]);
-
-
